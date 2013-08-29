@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="uauth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="../css/signin.css" rel="stylesheet">
+
+  <title>Webapp2 Auth</title>
+
+  <!-- Bootstrap core CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-cookies.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/jquery.js"></script>     
+</head>
+<body ng-controller="LoginCtrl">
+  <div class="container" >
+    <div class="container"> 
+      <form ng-submit="submit()" class="form-signin">
+        <h2 class="form-signin-heading">Log in</h2>
+        <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)" message="alert.msg"></alert>
+        <div class="container">
+          <input type="text" class="form-control" placeholder="Username" name="username" ng-model="username" ng-change="check_username()"><br>
+          <input type="password" class="form-control" placeholder="Password" name="password" ng-model="password"><br>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+        </div>
+      </form>
+    </div>
+    
+  </div> <!-- /container -->
+  <script src="../js/ui-bootstrap-0.5.0.min.js"></script>
+  <script src="../js/ui-bootstrap-tpls-0.5.0.min.js"></script>
+</body>
+</html>
